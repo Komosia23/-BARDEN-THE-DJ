@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DJ Barden 254 | Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+
+  <!-- Theme Toggle -->
+  <div class="theme-toggle" id="themeToggle">🌙</div>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-content" data-aos="fade-up">
+      <h1>DJ Barden 254</h1>
+      <p>Vibes, Beats & Memories</p>
+      <a href="#contact" class="btn-neon">Book Me</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container" data-aos="fade-right">
+      <h2>About Me</h2>
+      <p>DJ Barden 254 is a professional DJ specializing in electronic, afrobeat, and deep house. I bring unforgettable vibes to every event, keeping the crowd dancing all night.</p>
+    </div>
+  </section>
+
+  <!-- Music / Mixes Section -->
+  <section id="mixes">
+    <div class="container" data-aos="fade-left">
+      <h2>My Mixes</h2>
+      <div class="mix-player">
+        <audio id="audio1" controls>
+          <source src="assets/audio/mix1.mp3" type="audio/mpeg">
+        </audio>
+        <canvas id="visualizer"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events Section -->
+  <section id="events">
+    <div class="container" data-aos="fade-up">
+      <h2>Upcoming Gigs</h2>
+      <ul class="events-list">
+        <li>Feb 20, 2026 - Nairobi Club Night</li>
+        <li>Mar 15, 2026 - Eldoret Music Fest</li>
+        <li>Apr 5, 2026 - Private Event</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <div class="container" data-aos="zoom-in">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        <img src="assets/images/gallery1.jpg" alt="Gallery Image">
+        <img src="assets/images/gallery2.jpg" alt="Gallery Image">
+        <img src="assets/images/gallery3.jpg" alt="Gallery Image">
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container" data-aos="fade-up">
+      <h2>Contact / Booking</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Message" required></textarea>
+        <button type="submit" class="btn-neon">Send Message</button>
+      </form>
+      <a href="https://wa.me/254798917694" class="whatsapp-btn" target="_blank">Chat on WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 DJ Barden 254. All Rights Reserved.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script>
+    AOS.init({ duration: 1200 });
+  </script>
+</body>
+</html>
