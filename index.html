@@ -1,249 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DJ Barden 254 | Professional DJ</title>
+  <meta charset="UTF-8">
+  <title>DJ Barden 254 | Professional DJ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
-        body {
-            background: #f9f9f9;
-            color: #333;
-            line-height: 1.6;
-        }
+    body {
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
 
-        header {
-            background: #ffffff;
-            padding: 20px 10%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+    header {
+      background: #fff;
+      padding: 20px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-        header h1 {
-            color: #111;
-            font-weight: 700;
-        }
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
 
-        nav a {
-            margin-left: 20px;
-            text-decoration: none;
-            color: #555;
-            font-weight: 500;
-        }
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #555;
+      font-weight: 500;
+    }
 
-        nav a:hover {
-            color: #000;
-        }
+    nav a:hover {
+      color: #ff0055;
+    }
 
-        .hero {
-            padding: 80px 10%;
-            background: linear-gradient(120deg, #ffffff, #f0f0f0);
-            text-align: center;
-        }
+    section {
+      padding: 70px 10%;
+    }
 
-        .hero h2 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
+    .hero {
+      text-align: center;
+      background: linear-gradient(120deg, #ffffff, #f1f1f1);
+    }
 
-        .hero span {
-            color: #ff0055;
-        }
+    .hero h2 {
+      font-size: 3rem;
+    }
 
-        .hero p {
-            font-size: 1.1rem;
-            margin-bottom: 30px;
-            color: #555;
-        }
+    .hero span {
+      color: #ff0055;
+    }
 
-        .btn {
-            padding: 12px 30px;
-            background: #ff0055;
-            color: white;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: 600;
-        }
+    .hero p {
+      margin: 15px 0 30px;
+      color: #555;
+    }
 
-        section {
-            padding: 60px 10%;
-        }
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background: #ff0055;
+      color: #fff;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+    }
 
-        section h2 {
-            text-align: center;
-            font-size: 2.2rem;
-            margin-bottom: 40px;
-        }
+    h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+    }
 
-        .about p {
-            max-width: 800px;
-            margin: auto;
-            text-align: center;
-            color: #555;
-        }
+    .about p {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      color: #555;
+    }
 
-        .genres {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            text-align: center;
-        }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
 
-        .genre-box {
-            background: #ffffff;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            font-weight: 600;
-        }
+    .box {
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      font-weight: 600;
+    }
 
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
+    .music-box {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
 
-        .service-box {
-            background: #ffffff;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            text-align: center;
-        }
+    .music-actions {
+      margin-top: 20px;
+    }
 
-        form {
-            max-width: 600px;
-            margin: auto;
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-        }
+    form {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    }
 
-        form input, form textarea {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 15px;
-            border-radius: 10px;
-            border: 1px solid #ccc;
-            outline: none;
-        }
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
 
-        form button {
-            width: 100%;
-            padding: 12px;
-            background: #ff0055;
-            color: white;
-            border: none;
-            border-radius: 30px;
-            font-size: 1rem;
-            cursor: pointer;
-        }
+    form button {
+      width: 100%;
+    }
 
-        footer {
-            background: #ffffff;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-            color: #777;
-        }
+    footer {
+      background: #fff;
+      padding: 20px;
+      text-align: center;
+      color: #777;
+      margin-top: 40px;
+    }
 
-        @media(max-width:768px){
-            .hero h2{
-                font-size:2.2rem;
-            }
-            header{
-                flex-direction: column;
-            }
-        }
-    </style>
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 2.2rem;
+      }
+      header {
+        flex-direction: column;
+      }
+      nav {
+        margin-top: 10px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
 <header>
-    <h1>DJ Barden 254</h1>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#genres">Genres</a>
-        <a href="#services">Services</a>
-        <a href="#booking">Booking</a>
-    </nav>
+  <h1>DJ Barden 254</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#genres">Genres</a>
+    <a href="#music">Music</a>
+    <a href="#services">Services</a>
+    <a href="#booking">Booking</a>
+  </nav>
 </header>
 
 <section class="hero">
-    <h2>DJ <span>Barden 254</span></h2>
-    <p>Professional DJ bringing energy, vibes & unforgettable moments</p>
-    <a href="#booking" class="btn">Book Me</a>
+  <h2>DJ <span>Barden 254</span></h2>
+  <p>Professional DJ bringing vibes, energy & unforgettable moments</p>
+  <a href="#booking" class="btn">Book Me</a>
 </section>
 
 <section id="about" class="about">
-    <h2>About Me</h2>
-    <p>
-        DJ Barden 254 is a professional DJ delivering high-energy performances
-        across clubs, events, parties and private functions. Known for smooth
-        transitions and crowd control, I specialize in creating unforgettable
-        musical experiences.
-    </p>
+  <h2>About Me</h2>
+  <p>
+    DJ Barden 254 is a professional DJ known for high-energy performances,
+    smooth transitions and perfect crowd control across clubs, events,
+    private parties and corporate functions.
+  </p>
 </section>
 
 <section id="genres">
-    <h2>Music Genres</h2>
-    <div class="genres">
-        <div class="genre-box">Dancehall</div>
-        <div class="genre-box">Bongo</div>
-        <div class="genre-box">Reggae</div>
-        <div class="genre-box">Afrobeats</div>
+  <h2>Music Genres</h2>
+  <div class="grid">
+    <div class="box">Dancehall</div>
+    <div class="box">Bongo</div>
+    <div class="box">Reggae</div>
+    <div class="box">Afrobeats</div>
+  </div>
+</section>
+
+<section id="music">
+  <h2>Latest Mix</h2>
+
+  <div class="music-box">
+    <!-- MIXCLOUD PLAYER -->
+    <iframe id="djPlayer"
+      width="100%"
+      height="180"
+      src="https://player-widget.mixcloud.com/widget/iframe/?light=1&hide_cover=1&feed=%2FYOUR_MIXCLOUD_USERNAME%2F"
+      frameborder="0"
+      allow="autoplay">
+    </iframe>
+
+    <div class="music-actions">
+      <button class="btn" onclick="playMix()">▶ Play Mix</button>
+      <a href="YOUR_MP3_DOWNLOAD_LINK.mp3" download class="btn">⬇ Download Mix</a>
     </div>
+  </div>
 </section>
 
 <section id="services">
-    <h2>Services</h2>
-    <div class="services">
-        <div class="service-box">
-            <h3>Club DJ</h3>
-            <p>High-energy club performances that keep the dance floor packed.</p>
-        </div>
-        <div class="service-box">
-            <h3>Events & Parties</h3>
-            <p>Birthdays, graduations, house parties & special events.</p>
-        </div>
-        <div class="service-box">
-            <h3>Corporate & Private</h3>
-            <p>Professional sound and music tailored to your event.</p>
-        </div>
-    </div>
+  <h2>Services</h2>
+  <div class="grid">
+    <div class="box">Club DJ</div>
+    <div class="box">Events & Parties</div>
+    <div class="box">Corporate & Private Events</div>
+  </div>
 </section>
 
 <section id="booking">
-    <h2>Book DJ Barden 254</h2>
-    <form>
-        <input type="text" placeholder="Full Name" required>
-        <input type="email" placeholder="Email Address" required>
-        <input type="date" required>
-        <input type="text" placeholder="Event Location" required>
-        <textarea rows="5" placeholder="Event Details"></textarea>
-        <button type="submit">Send Booking Request</button>
-    </form>
+  <h2>Book DJ Barden 254</h2>
+  <form>
+    <input type="text" placeholder="Full Name" required>
+    <input type="email" placeholder="Email Address" required>
+    <input type="date" required>
+    <input type="text" placeholder="Event Location" required>
+    <textarea rows="5" placeholder="Event Details"></textarea>
+    <button type="submit" class="btn">Send Booking Request</button>
+  </form>
 </section>
 
 <footer>
-    <p>© 2026 DJ Barden 254 | All Rights Reserved</p>
+  <p>© 2026 DJ Barden 254 | All Rights Reserved</p>
 </footer>
 
+<script>
+  function playMix() {
+    const player = document.getElementById("djPlayer");
+    if (!player.src.includes("autoplay")) {
+      player.src += "&autoplay=1";
+    }
+  }
+</script>
+
 </body>
-</html>
+      </html>
