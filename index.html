@@ -9,19 +9,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background: #f9f9f9; color: #333; line-height: 1.6; }
 
-    body {
-      background: #f9f9f9;
-      color: #333;
-      line-height: 1.6;
-    }
-
+    /* Header */
     header {
       background: #fff;
       padding: 20px 10%;
@@ -33,44 +24,20 @@
       top: 0;
       z-index: 1000;
     }
+    header h1 { font-size: 1.5rem; font-weight: 700; }
+    nav a { margin-left: 20px; text-decoration: none; color: #555; font-weight: 500; }
+    nav a:hover { color: #ff0055; }
 
-    header h1 {
-      font-size: 1.5rem;
-      font-weight: 700;
-    }
+    /* Sections */
+    section { padding: 70px 10%; }
+    h2 { text-align: center; font-size: 2.2rem; margin-bottom: 40px; }
 
-    nav a {
-      margin-left: 20px;
-      text-decoration: none;
-      color: #555;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      color: #ff0055;
-    }
-
-    section {
-      padding: 70px 10%;
-    }
-
-    .hero {
-      text-align: center;
-      background: linear-gradient(120deg, #ffffff, #f1f1f1);
-    }
-
-    .hero h2 {
-      font-size: 3rem;
-    }
-
-    .hero span {
-      color: #ff0055;
-    }
-
-    .hero p {
-      margin: 15px 0 30px;
-      color: #555;
-    }
+    /* Hero Section */
+    .hero { text-align: center; background: linear-gradient(120deg,#fff,#f1f1f1); }
+    .hero-container { position: relative; overflow: hidden; }
+    .hero h2 { font-size: 3rem; }
+    .hero span { color: #ff0055; }
+    .hero p { margin: 15px 0 30px; color: #555; }
 
     .btn {
       display: inline-block;
@@ -84,25 +51,37 @@
       cursor: pointer;
     }
 
-    h2 {
-      text-align: center;
-      font-size: 2.2rem;
-      margin-bottom: 40px;
+    /* Logo animation */
+    .dj-logo {
+      width: 220px;
+      margin-bottom: 15px;
+      animation: bounce 2.5s ease-in-out infinite;
+    }
+    @keyframes bounce {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
     }
 
-    .about p {
-      max-width: 800px;
-      margin: auto;
-      text-align: center;
-      color: #555;
+    /* DJ photo animation */
+    .dj-photo {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      animation: float 4s ease-in-out infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0); }
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
+    /* About */
+    .about p { max-width: 800px; margin: auto; text-align: center; color: #555; }
 
+    /* Grid boxes */
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
     .box {
       background: #fff;
       padding: 30px;
@@ -112,55 +91,39 @@
       font-weight: 600;
     }
 
-    .music-box {
-      max-width: 800px;
-      margin: auto;
-      text-align: center;
-    }
+    /* Music Section */
+    .music-box { max-width: 800px; margin:auto; text-align:center; }
+    .music-actions { margin-top:20px; }
 
-    .music-actions {
-      margin-top: 20px;
-    }
-
+    /* Booking Form */
     form {
       max-width: 600px;
-      margin: auto;
-      background: #fff;
-      padding: 40px;
-      border-radius: 20px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+      margin:auto;
+      background:#fff;
+      padding:40px;
+      border-radius:20px;
+      box-shadow:0 10px 20px rgba(0,0,0,0.08);
     }
+    form input, form textarea { width:100%; padding:12px; margin-bottom:15px; border-radius:10px; border:1px solid #ccc; }
+    form button { width:100%; }
 
-    form input, form textarea {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 15px;
-      border-radius: 10px;
-      border: 1px solid #ccc;
+    /* Footer */
+    footer { background:#fff; padding:20px; text-align:center; color:#777; margin-top:40px; }
+
+    /* Fade-in hero text */
+    .hero h2, .hero p, .hero .btn {
+      opacity: 0;
+      animation: fadeIn 1.5s ease forwards;
     }
+    .hero h2 { animation-delay: 0.5s; }
+    .hero p { animation-delay: 1s; }
+    .hero .btn { animation-delay: 1.5s; }
+    @keyframes fadeIn { to { opacity:1; } }
 
-    form button {
-      width: 100%;
-    }
-
-    footer {
-      background: #fff;
-      padding: 20px;
-      text-align: center;
-      color: #777;
-      margin-top: 40px;
-    }
-
-    @media (max-width: 768px) {
-      .hero h2 {
-        font-size: 2.2rem;
-      }
-      header {
-        flex-direction: column;
-      }
-      nav {
-        margin-top: 10px;
-      }
+    @media(max-width:768px){
+      .hero h2{ font-size:2.2rem; }
+      header{ flex-direction:column; }
+      nav{ margin-top:10px; }
     }
   </style>
 </head>
@@ -179,9 +142,17 @@
 </header>
 
 <section class="hero">
-  <h2>DJ <span>Barden 254</span></h2>
-  <p>Professional DJ bringing vibes, energy & unforgettable moments</p>
-  <a href="#booking" class="btn">Book Me</a>
+  <div class="hero-container">
+    <!-- DJ Logo -->
+    <img src="images/DJ_Barden_254_logo.png" alt="DJ Barden 254 Logo" class="dj-logo">
+
+    <!-- DJ Photo -->
+    <img src="images/dj-barden.png" alt="DJ Barden 254" class="dj-photo">
+
+    <h2>DJ <span>Barden 254</span></h2>
+    <p>Professional DJ bringing vibes, energy & unforgettable moments</p>
+    <a href="#booking" class="btn">Book Me</a>
+  </div>
 </section>
 
 <section id="about" class="about">
@@ -205,17 +176,11 @@
 
 <section id="music">
   <h2>Latest Mix</h2>
-
   <div class="music-box">
-    <!-- MIXCLOUD PLAYER -->
-    <iframe id="djPlayer"
-      width="100%"
-      height="180"
+    <iframe id="djPlayer" width="100%" height="180"
       src="https://player-widget.mixcloud.com/widget/iframe/?light=1&hide_cover=1&feed=%2FYOUR_MIXCLOUD_USERNAME%2F"
-      frameborder="0"
-      allow="autoplay">
+      frameborder="0" allow="autoplay">
     </iframe>
-
     <div class="music-actions">
       <button class="btn" onclick="playMix()">▶ Play Mix</button>
       <a href="YOUR_MP3_DOWNLOAD_LINK.mp3" download class="btn">⬇ Download Mix</a>
@@ -251,11 +216,9 @@
 <script>
   function playMix() {
     const player = document.getElementById("djPlayer");
-    if (!player.src.includes("autoplay")) {
-      player.src += "&autoplay=1";
-    }
+    if (!player.src.includes("autoplay")) player.src += "&autoplay=1";
   }
 </script>
 
 </body>
-      </html>
+</html>
