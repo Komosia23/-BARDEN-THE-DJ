@@ -1,0 +1,34 @@
+🎧 DJ Barden 254 – Official Website
+Professional DJ website for DJ Barden 254 featuring music playlists, booking form, animated hero section, and live performance showcase.
+🌟 About
+DJ Barden 254 is a professional DJ specializing in:
+🎶 Dancehall
+🎶 Bongo
+🎶 Reggae
+🎶 Afro Beats
+This website is designed to promote events, share mixes, and allow clients to book performances easily.
+🚀 Features
+✅ Light Theme Design
+✅ Animated Hero Section
+✅ DJ Photo & Logo (PNG with transparency)
+✅ Music Playlist with Auto Play
+✅ Downloadable Music
+✅ Booking Form
+✅ Responsive Layout (Mobile Friendly)
+✅ Deployed with GitHub Pages
+🛠️ Technologies Used
+HTML5
+CSS3
+JavaScript
+📁 Project Structure
+Copy code
+
+dj-barden-254/
+│
+├── index.html
+├── images/
+│   ├── DJ_Barden_254_logo.png
+│   └── dj-barden.png
+└── README.md
+🌍 Live Website
+🔗 https://Komosia23.github.io/dj-barden-254/�
